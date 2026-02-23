@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>IMC</title>
+  </head>
+  <body>
+    <!-- Form: Faz a separação lógica dos campos de entrada por uso. Ex: É poss´ivel ter um formulário para cadastro e outro de login -->
+    <!-- Garante que qualquer campo indicado com required funcione corretamente -->
+    <form id="formulario" action="">
+      <!-- Label: define o campo que identifica o input que possuir o id correspondente ao seu campo "for" -->
+      <label for="nome">Nome</label>
+      <!-- Input: Campo de entrada de valores pelo usuário. Se possuir um id igual ao for do label anterior, ambos serão conectados -->
+      <!-- Há vários tipos de entrada diferentes, como senhas (passwords, number, email, etc) -->
+      <input type="text" id="nome" name="nome" placeholder="Digite o nome" />
+      <label for="peso">Peso (kg)</label>
+      <input type="text" id="peso" name="peso" placeholder="Digite o peso" />
+      <label for="altura">Altura (m)</label>
+      <input type="text" id="altura" name="altura" placeholder="Digite a altura" />
+      <button id="btnCalcular">CALCULAR</button>
+
+      <p name="resultado"></p>
+    </form>
+  </body>
+</html>
