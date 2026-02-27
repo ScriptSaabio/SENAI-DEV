@@ -7,7 +7,8 @@
 const taxaDolar = 5.5;
 
 
-// Erro 2 - Função mantinha variável intermediária desnecessária (let resultado + return resultado) → simplificada para return valorDolar * taxaDolar;, retornando o cálculo diretamente.
+// Erro 2 - Função mantinha variável intermediária desnecessária (let resultado + return resultado) → 
+// simplificada para return valorDolar * taxaDolar;, retornando o cálculo diretamente.
 function converterParaReal(valorDolar) {
   return valorDolar * taxaDolar;
 }
@@ -25,11 +26,13 @@ const transacao = {
 };
 
 
-// Erro 5 - Função atribuída sem ser executada (const valorFinal = converterParaReal) → corrigido para chamada da função com argumento (converterParaReal(transacao.valor)).
+// Erro 5 - Função atribuída sem ser executada (const valorFinal = converterParaReal) → 
+// corrigido para chamada da função com argumento (converterParaReal(transacao.valor)).
 const valorFinal = converterParaReal(transacao.valor);
 
 
-// Erro 6 - Comparação de concluida com strings "sim" e "não" → corrigido para comparação com valores booleanos true e false.
+// Erro 6 - Comparação de concluida com strings "sim" e "não" → 
+// corrigido para comparação com valores booleanos true e false.
 // Obs: Adicionando R$ antes do valor final
 if (transacao.concluida == true) {
   console.log(
