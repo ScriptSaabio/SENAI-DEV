@@ -4,60 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* li {
-            font-size: 24px;
-        } */
-
-        table {
-            border: 1px solid black;
-        }
-
-        tr {
-            border: 1px solid black;
-        }
-
-        th {
-            border: 1px solid black;
-        }
-
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    <title>hardcore</title>
 </head>
 
 <body>
 
-    <h1>Cadastro de Alunos</h1>
-    <p>Este é um <strong>exercício prático</strong> paa treinar HTML. <br> Aqui você vai usar títulos, parágrafos, listas e tabelas.</p>
+    <h1>Restaurante TechFood</h1>
+    <p>Este é o <strong>desafio final</strong> da aula 2</p>
+    <p>Somente os alunos mais <em>capazes</em> conseguirão concluir sem erros!</p>
     <!-- <p>Lista Ordenada com ul e li</p> -->
 
-    <h1>Lista de Matérias</h1>
+    <h1>Lista de Tarefas</h1>
     <ul >
-        <li>Matemática</li>
-        <li>Português</li>
-        <li>Ciências</li>
+        <li>Criar um titulo principal</li>
+        <li>Inserir <strong>parágrafos</strong> com <em>ênfase</em> e quebra de linha</li>
+        <li>Fazer uma lista ordenada dentro de outra lista</li>
     </ul>
-    <h1>Tabela de Alunos</h1>
 
-    <table>
+    <h1>Lista Aninhada</h1>
+
+    <ol>
+        <li> Bebidas
+            <ul>
+                <li>Suco</li>
+                <li>Refrigerante</li>
+                <li>Agua</li>
+            </ul>
+        </li>
+         <li> Salgados
+            <ul>
+                <li>Coxinha</li>
+                <li>Pastel</li>
+                <li>Pão de Queijo</li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <h1>Tabela Master</h1>
+    <table border="1">
         <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Telefone</th>
+            <th><strong>Produto</strong></th>
+            <th><strong>Imagem</strong></th>
+            <th><strong>Preço</strong></th>
+            <th><strong>Disponivel</strong></th>
         </tr>
         <tr>
-            <td>Ana</td>
-            <td>20</td>
-            <td>(11) 99999-1111</td>
+            <td>Coxinha Tradicional</td>
+            <td><img src="data:image/jpeg;base64,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" alt="Aqui jaz uma imagem"> Coxinha Tradicional</td>
+            <td>R$ 5,00</td>
+            <td>Sim</td>
         </tr>
         <tr>
-            <td>Carlos</td>
-            <td>22</td>
-            <td>(11) 98888-2222</td>
+            <td>Coxinha Gourmet</td>
+            <td><img src="https://lh3.googleusercontent.com/p/AF1QipO_grfSzgP3URRneNgIvSCNHdyNdqMuD2AtTkdv=w114-h114-n-k-no" alt="Aqui jaz uma imagem"> Coxinha Gourmet</td>
+            <td>R$ 8,00</td>
+            <td>Não</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <strong>Promoção:Leve 3 e pague 2!</strong>
+            </td>
         </tr>
     </table>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZ48LOfIQPuKGeMc_PhYZwAzX7ickaE9UHk18Urb7qnY_jLd9l6iRINhnLa9BiZkwTdpWI0eR7yvi8YR38-tLhbm3SylXht9w0WErZs9idsHOjpXfIpnAaS_gm5Kl&s=10&ec=121532766" alt="Aqui jaz uma imagem">
+
+    <h1>Desafio Extra</h1>
+
+    <p>Agor acoloque uma imagem <strong>fora da tabela</strong> com largura de 200px e uma legenda abaixo sando parágrafo</p>
+    <p><img src="https://lh3.googleusercontent.com/p/AF1QipO_grfSzgP3URRneNgIvSCNHdyNdqMuD2AtTkdv=w114-h114-n-k-no" width="200px" alt="Promoção do dia">Promoção Especial</p>
+    <p><em></em>Imagem ilustrativa da promoção do dia</em></p>
+
+    <a href="">wehdhdh</a>
 </html>
