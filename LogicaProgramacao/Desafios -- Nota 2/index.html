@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title> Gestao de Estoque </title>
 </head>
+
 <body>
-<fieldset id="fieldsetFuncoes">
-<legend>Gestão de Estoque</legend>
-<div id="containerCurvaABC">
-    <div class="selecaoCurva">
-        <label for="A">Curva A</label>
-        <input class="btnCurva" type="radio" name="curvaABC" id="A">
-    </div>
-    <div class="selecaoCurva">
-        <label for="B">Curva B</label>
-        <input class="btnCurva" type="radio" name="curvaABC" id="B">
-    </div>
-    <div class="selecaoCurva">
-       <label for="C">Curva C</label>
-        <input class="btnCurva" type="radio" name="curvaABC" id="C"> 
-    </div>
-</div>
-</fieldset>
-<fieldset id="fieldsetDisplay">
-    <legend>Visualizar</legend>
-    <div id="containerDisplay">
-    </div>
-</fieldset>
+    <fieldset id="fieldsetFuncoes">
+        <legend>Gestão de Estoque</legend>
+
+        <div class="containers">
+            <p>Buscar</p>
+
+            <div id="containerCurvaABC">
+                <div class="selecaoCurva">
+                    <label for="A">Curva A</label>
+                    <input class="btnCurva" type="radio" name="curvaABC" id="A">
+                </div>
+                <div class="selecaoCurva">
+                    <label for="B">Curva B</label>
+                    <input class="btnCurva" type="radio" name="curvaABC" id="B">
+                </div>
+                <div class="selecaoCurva">
+                    <label for="C">Curva C</label>
+                    <input class="btnCurva" type="radio" name="curvaABC" id="C">
+                </div>
+            </div>
+        </div>
+        <div class="containers">
+            <button id="listarTodos">Listar Todos os Produtos</button>
+        </div>
+    </fieldset>
+
+    <fieldset id="fieldsetDisplay">
+        <legend>Visualizar</legend>
+        <div id="containerDisplay">
+        </div>
+    </fieldset>
 
 </body>
-    <script src="./script.js" type="module"></script>
+<script src="./script.js" type="module"></script>
+
 </html>
