@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio - La Fiamma</title>
-    <link rel="stylesheet" href="style.css">
 
+    <title>Cardápio - La Fiamma</title>
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <header class="header">
 
         <div class="logo">
-            La <span>Fiamma</span>
+            <a href="index.html">La <span>Fiamma</span></a>
         </div>
 
         <div class="nav-area">
@@ -27,7 +29,7 @@
                 <a href="#contatos">Contato</a>
             </nav>
 
-            <span class="material-symbols-outlined cart"  onclick="toggleCart()">
+            <span class="material-symbols-outlined cart" onclick="toggleCart()">
                 shopping_cart
             </span>
 
@@ -35,39 +37,27 @@
 
     </header>
 
+
     <main class="cardapio">
 
         <h1>Nosso Cardápio</h1>
 
-        <div class="pizzas">
 
-            <div class="pizza">
-                <h3>Margherita</h3>
-                <p>Molho de tomate, mussarela fresca, manjericão e azeite.</p>
-                <span class="preco">R$ 45,00</span>
-            </div>
+        <div class="filtros">
 
-            <div class="pizza">
-                <h3>Calabresa</h3>
-                <p>Mussarela, calabresa fatiada, cebola e orégano.</p>
-                <span class="preco">R$ 49,00</span>
-            </div>
-
-            <div class="pizza">
-                <h3>Quatro Queijos</h3>
-                <p>Mussarela, provolone, parmesão e gorgonzola.</p>
-                <span class="preco">R$ 52,00</span>
-            </div>
-
-            <div class="pizza">
-                <h3>Frango com Catupiry</h3>
-                <p>Frango desfiado temperado com cremoso catupiry.</p>
-                <span class="preco">R$ 55,00</span>
-            </div>
+            <button onclick="filtrarPizza('todas')">Todas</button>
+            <button onclick="filtrarPizza('tradicional')">Tradicionais</button>
+            <button onclick="filtrarPizza('especial')">Especiais</button>
+            <button onclick="filtrarPizza('doce')">Doces</button>
 
         </div>
 
+
+        <div class="pizzas"></div>
+
     </main>
+
+
 
     <footer class="footer">
 
@@ -101,18 +91,25 @@
 
     </footer>
 
+
+
     <div class="cart-sidebar" id="cartSidebar">
 
         <div class="cart-header">
+
             <h2>Seu Pedido</h2>
+
             <span class="material-symbols-outlined close-cart" onclick="toggleCart()">
                 close
             </span>
+
         </div>
+
 
         <div class="cart-items" id="cartItems">
             <p class="empty-cart">Seu carrinho está vazio</p>
         </div>
+
 
         <div class="cart-footer">
 
@@ -128,6 +125,9 @@
         </div>
 
     </div>
+
+
+    <script src="cardapio.js"></script>
 
 </body>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Painel Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Painel de Cadastro de Pizzas</h1>
+
+<div class="admin-form">
+
+<input id="nome" placeholder="Nome da Pizza">
+
+<input id="ingredientes" placeholder="Ingredientes">
+
+<input id="preco" placeholder="Preço">
+
+<select id="categoria">
+
+<option value="tradicional">Tradicional</option>
+<option value="especial">Especial</option>
+<option value="doce">Doce</option>
+
+</select>
+
+<input id="imagem" placeholder="URL da imagem">
+
+<button onclick="salvarPizza()">Cadastrar Pizza</button>
+
+</div>
+
+<h2>Pizzas cadastradas</h2>
+
+<div id="listaPizzas"></div>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

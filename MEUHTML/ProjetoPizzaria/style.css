@@ -32,6 +32,15 @@ body {
     font-family: 'Hurricane', cursive;
 }
 
+.logo a {
+    text-decoration: none;
+    /* remove sublinhado */
+    color: inherit;
+    /* mantém a mesma cor do texto */
+    font-family: inherit;
+    /* mantém a mesma fonte */
+}
+
 .nav-area {
     display: flex;
     align-items: center;
@@ -81,7 +90,7 @@ body {
 
 .hero {
     height: 90vh;
-    background-image: url("pizza.jpeg");
+    background-image: url("img/pizza.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -192,6 +201,314 @@ body {
     border: 2px solid #ddd;
 }
 
+/* CARDÁPIO */
+
+.cardapio {
+
+    padding: 80px 10%;
+    text-align: center;
+
+}
+
+.pizzas{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+width:80%;
+
+margin:40px auto;
+
+}
+
+
+
+.pizza-card{
+
+background:#1e1e1e;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+
+transition:0.25s;
+
+}
+
+
+
+.pizza-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+
+.pizza-img img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+}
+
+
+
+.pizza-info{
+
+padding:15px;
+
+}
+
+
+
+.pizza-info h3{
+
+color:#f39c12;
+
+margin-bottom:8px;
+
+}
+
+
+
+.pizza-info p{
+
+color:#ccc;
+
+font-size:14px;
+
+line-height:1.4;
+
+}
+
+
+
+.pizza-footer{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:15px;
+
+}
+
+
+
+.preco{
+
+color:white;
+
+font-weight:bold;
+
+font-size:16px;
+
+}
+
+
+
+.pizza-footer button{
+
+background:#f39c12;
+
+border:none;
+
+color:white;
+
+font-size:18px;
+
+width:35px;
+
+height:35px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+
+
+.pizza-footer button:hover{
+
+background:#e67e22;
+
+}
+
+.filtros{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.filtros button{
+
+padding:8px 18px;
+
+border:none;
+
+background:white;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+.filtros button.active{
+
+background:#f39c12;
+
+color:white;
+
+}
+
+
+
+/* SOBRE */
+
+.sobre {
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre-imagem {
+    position: relative;
+    transform: rotate(8deg);
+    transition: transform 0.4s ease;
+}
+
+.sobre-imagem img {
+    width: 500px;
+    border-radius: 10px;
+    display: block;
+}
+
+.sobre-imagem:hover {
+    transform: rotate(0deg);
+}
+
+.historia-box {
+    position: absolute;
+    bottom: 20px;
+    right: -40px;
+
+    background: #f39c12;
+    color: white;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    border: 4px solid #f39c12;
+}
+
+.historia-box strong {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.historia-box span {
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.sobre-texto {
+    max-width: 520px;
+}
+
+.sobre-texto legend {
+    color: #f39c12;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sobre-texto h2 {
+    color: #f39c12;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.sobre-destaques {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.destaque {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.destaque span {
+    font-size: 36px;
+    color: #f39c12;
+}
+
+.destaque h3 {
+    margin-bottom: 5px;
+}
+
+.destaque p {
+    margin: 0;
+}
+
+.marca {
+    font-family: 'Hurricane', cursive;
+    /* mesma fonte do logo */
+    font-weight: 600;
+}
+
+.marca span {
+    color: #f39c12;
+}
+
 /* FOOTER */
 
 .footer {
@@ -237,14 +554,14 @@ body {
 
 
 /* CARRINHO */
-.cart-sidebar{
+.cart-sidebar {
     position: fixed;
     top: 0;
     right: -400px;
     width: 350px;
     height: 100%;
     background: white;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -252,44 +569,44 @@ body {
     z-index: 999;
 }
 
-.cart-sidebar.open{
+.cart-sidebar.open {
     right: 0;
 }
 
-.cart-header{
+.cart-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.close-cart{
+.close-cart {
     cursor: pointer;
 }
 
-.cart-items{
+.cart-items {
     flex: 1;
     overflow-y: auto;
 }
 
-.cart-item{
+.cart-item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.cart-footer{
+.cart-footer {
     border-top: 1px solid #ddd;
     padding-top: 15px;
 }
 
-.cart-total{
+.cart-total {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
-.btn-whatsapp{
+.btn-whatsapp {
     width: 100%;
     background: #25D366;
     color: white;
@@ -297,4 +614,135 @@ body {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+
+
+/* ADMINISTRADOR */
+
+.admin-login{
+
+width:300px;
+
+margin:120px auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.admin-login input{
+
+padding:10px;
+
+}
+
+.admin-login button{
+
+padding:10px;
+
+background:#f39c12;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+.admin-form{
+
+max-width:500px;
+
+margin:40px auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.admin-form input,
+.admin-form select{
+
+padding:10px;
+
+}
+
+.admin-form button{
+
+padding:12px;
+
+background:#f39c12;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+#listaPizzas{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+padding:40px;
+
+}
+
+.pizza-admin{
+
+background:white;
+
+padding:15px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+text-align:center;
+
+}
+
+.pizza-admin img{
+
+width:100%;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+}
+
+.pizza-admin button{
+
+margin-top:10px;
+
+background:f39c12;
+
+color:white;
+
+border:none;
+
+padding:6px 10px;
+
+cursor:pointer;
+
 }

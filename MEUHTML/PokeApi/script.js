@@ -1,94 +1,91 @@
-const container = document.getElementById("pokemonContainer")
-const modal = document.getElementById("modal")
-const close = document.getElementById("close")
-const detail = document.getElementById("pokemonDetail")
-const search = document.getElementById("search")
+const container = document.getElementById("pokemonContainer");
+const modal = document.getElementById("modal");
+const close = document.getElementById("close");
+const detail = document.getElementById("pokemonDetail");
+const search = document.getElementById("search");
 
-let pokemonList = []
+let pokemonList = [];
 
-async function loadPokemon(){
+async function loadPokemon() {
+  // pergunta quantos pokemon existem
+  const resCount = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1");
+  const dataCount = await resCount.json();
 
-// pergunta quantos pokemon existem
-const resCount = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1")
-const dataCount = await resCount.json()
+  const totalPokemon = dataCount.count;
 
-const totalPokemon = dataCount.count
+  // busca todos os pokemon
+  const res = await fetch(
+    `https://pokeapi.co/api/v2/pokemon?limit=${totalPokemon}`,
+  );
+  const data = await res.json();
 
-// busca todos os pokemon
-const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${totalPokemon}`)
-const data = await res.json()
+  pokemonList = data.results;
 
-pokemonList = data.results
-
-renderList(pokemonList)
-
+  renderList(pokemonList);
 }
 
-function renderList(list){
+function renderList(list) {
+  container.innerHTML = "";
 
-container.innerHTML = ""
+  list.forEach((pokemon) => {
+    const id = pokemon.url.split("/")[6];
 
-list.forEach(pokemon => {
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-const id = pokemon.url.split("/")[6]
-
-const card = document.createElement("div")
-card.classList.add("card")
-
-card.innerHTML = `
+    card.innerHTML = `
 <h3>#${id} ${pokemon.name}</h3>
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
-`
+`;
 
-card.onclick = ()=>loadPokemonDetail(id)
+    card.onclick = () => loadPokemonDetail(id);
 
-container.appendChild(card)
-
-})
-
+    container.appendChild(card);
+  });
 }
 
-async function loadPokemonDetail(id){
+async function loadPokemonDetail(id) {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  const pokemon = await res.json();
 
-const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-const pokemon = await res.json()
-
-showDetail(pokemon)
-
+  showDetail(pokemon);
 }
 
-function showDetail(pokemon){
+function showDetail(pokemon) {
+  modal.style.display = "block";
 
-modal.style.display = "block"
+  const types = pokemon.types
+    .map((t) => `<span class="type">${t.type.name}</span>`)
+    .join("");
 
-const types = pokemon.types.map(t =>
-`<span class="type">${t.type.name}</span>`
-).join("")
+  const abilities = pokemon.abilities
+    .map((a) => `<p>${a.ability.name}</p>`)
+    .join("");
 
-const abilities = pokemon.abilities.map(a =>
-`<p>${a.ability.name}</p>`
-).join("")
-
-const stats = pokemon.stats.map(stat => `
+  const stats = pokemon.stats
+    .map(
+      (stat) => `
 <p>${stat.stat.name}</p>
 <div class="stat">
 <div class="bar" style="width:${stat.base_stat}%"></div>
 </div>
-`).join("")
+`,
+    )
+    .join("");
 
-// conversão de altura
-const heightCm = pokemon.height * 10
-const heightM = (pokemon.height / 10).toFixed(2)
+  // conversão de altura
+  const heightCm = pokemon.height * 10;
+  const heightM = (pokemon.height / 10).toFixed(2);
 
-// conversão de peso
-const weightG = pokemon.weight * 100
-const weightKg = (pokemon.weight / 10).toFixed(2)
+  // conversão de peso
+  const weightG = pokemon.weight * 100;
+  const weightKg = (pokemon.weight / 10).toFixed(2);
 
-detail.innerHTML = `
+  detail.innerHTML = `
 
 <h2>#${pokemon.id} ${pokemon.name}</h2>
 
-<img width="200" src="${pokemon.sprites.other['official-artwork'].front_default}">
+<img width="200" src="${pokemon.sprites.other["official-artwork"].front_default}">
 
 <h3>Tipos</h3>
 <div>${types}</div>
@@ -102,31 +99,27 @@ ${abilities}
 <h3>Stats</h3>
 ${stats}
 
-`
-
+`;
 }
 
 // busca
-search.addEventListener("input", e => {
+search.addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase();
 
-const value = e.target.value.toLowerCase()
+  const filtered = pokemonList.filter(
+    (p) => p.name.includes(value) || p.url.split("/")[6].includes(value),
+  );
 
-const filtered = pokemonList.filter(p =>
-p.name.includes(value) ||
-p.url.split("/")[6].includes(value)
-)
-
-renderList(filtered)
-
-})
+  renderList(filtered);
+});
 
 // fechar modal
-close.onclick = ()=> modal.style.display = "none"
+close.onclick = () => (modal.style.display = "none");
 
-window.onclick = e => {
-if(e.target == modal){
-modal.style.display = "none"
-}
-}
+window.onclick = (e) => {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
-loadPokemon()
+loadPokemon();
