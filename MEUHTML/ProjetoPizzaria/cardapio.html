@@ -42,18 +42,14 @@
 
         <h1>Nosso Cardápio</h1>
 
-
-        <div class="filtros">
-
-            <button onclick="filtrarPizza('todas')">Todas</button>
-            <button onclick="filtrarPizza('tradicional')">Tradicionais</button>
-            <button onclick="filtrarPizza('especial')">Especiais</button>
-            <button onclick="filtrarPizza('doce')">Doces</button>
-
+        <div class="filtros-cardapio">
+            <button class="filtro ativo" data-categoria="todas">Todas</button>
+            <button class="filtro" data-categoria="tradicional">Tradicional</button>
+            <button class="filtro" data-categoria="especial">Especial</button>
+            <button class="filtro" data-categoria="doce">Doce</button>
         </div>
-
-
-        <div class="pizzas"></div>
+        
+        <div id="listaPizzas"></div>
 
     </main>
 
@@ -127,7 +123,7 @@
     </div>
 
 
-    <script src="cardapio.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
