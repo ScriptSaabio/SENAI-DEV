@@ -229,10 +229,10 @@ body {
 .pizza-card {
     width: 240px;
     flex: 0 0 240px;
-    background: #1e1e1e;
+    background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     transition: 0.25s;
 }
 
@@ -259,7 +259,7 @@ body {
 }
 
 .pizza-info p {
-    color: #ccc;
+    color: #0b1c2e;
     font-size: 13px;
     line-height: 1.4;
 }
@@ -273,7 +273,7 @@ body {
 }
 
 .preco {
-    color: white;
+    color: #0b1c2e;
     font-weight: bold;
     font-size: 16px;
 }
@@ -307,11 +307,13 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
-    background-color: #f39c12; /* cor padrão dos não ativos */
+    background-color: #f39c12;
+    /* cor padrão dos não ativos */
     color: #fff;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s ease; /* animação */
+    transition: all 0.3s ease;
+    /* animação */
 }
 
 .filtro:hover {
@@ -321,9 +323,11 @@ body {
 }
 
 .filtro.ativo {
-    background-color: #fff; /* botão ativo branco */
-    color: #f39c12; /* cor da letra do ativo (exemplo vermelho) */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #fff;
+    /* botão ativo branco */
+    color: #f39c12;
+    /* cor da letra do ativo (exemplo vermelho) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -522,6 +526,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    color: #f39c12;
 }
 
 .close-cart {
@@ -537,10 +542,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    color: #0b1c2e;
+    font-weight: bold;
 }
 
 .cart-footer {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #0b1c2e;
     padding-top: 15px;
 }
 
@@ -548,6 +555,8 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    color: #0b1c2e;
+    font-weight: bold;
 }
 
 .btn-whatsapp {
@@ -558,113 +567,4 @@ body {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-
-
-/* ADMINISTRADOR */
-
-.admin-container{
-
-width:80%;
-margin:40px auto;
-background:#eee;
-padding:30px;
-border-radius:12px;
-
-}
-
-.admin-header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
-
-}
-
-.admin-header h2{
-
-color:#f39c12;
-
-}
-
-.btn-nova{
-
-background:#f39c12;
-border:none;
-color:white;
-padding:10px 18px;
-border-radius:20px;
-cursor:pointer;
-
-}
-
-.tabela-pizzas{
-
-width:100%;
-border-collapse:collapse;
-
-}
-
-.tabela-pizzas th{
-
-text-align:left;
-padding:12px;
-border-bottom:2px solid #ccc;
-
-}
-
-.tabela-pizzas td{
-
-padding:10px;
-
-}
-
-.tabela-pizzas img{
-
-width:60px;
-height:40px;
-object-fit:cover;
-border-radius:6px;
-
-}
-
-.tabela-pizzas button{
-
-background:#e74c3c;
-border:none;
-color:white;
-padding:5px 10px;
-border-radius:6px;
-cursor:pointer;
-
-}
-
-.admin-login-box{
-
-width:300px;
-margin:120px auto;
-background:white;
-padding:30px;
-border-radius:10px;
-display:flex;
-flex-direction:column;
-gap:10px;
-
-}
-
-.admin-login-box input{
-
-padding:10px;
-
-}
-
-.admin-login-box button{
-
-background:#f39c12;
-border:none;
-color:white;
-padding:10px;
-
 }

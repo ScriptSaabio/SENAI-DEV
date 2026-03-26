@@ -1,0 +1,271 @@
+/* LOGIN ADMIN AJUSTADO */
+.admin-login-box {
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    background: #eee; /* mesmo fundo da admin-container */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-login-box h2 {
+    color: #f39c12;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.admin-login-box button {
+    width: 100%;
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.admin-login-box button:hover {
+    background: #e08e0b;
+}
+
+.admin-login-box #erro {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 500px) {
+    .admin-login-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* RESET ADMIN */
+.admin-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY E BACKGROUND */
+body {
+    background: #0b1c2e; /* fundo escuro */
+    color: white;        /* texto padrão branco */
+}
+
+/* HEADER GERAL */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background: #0b1c2e;
+    border-bottom: 3px solid #f39c12;
+}
+
+.logo {
+    font-size: 50px;
+    font-family: 'Hurricane', cursive;
+}
+
+.logo span {
+    color: #f39c12;
+    font-size: 50px;
+    font-family: 'Hurricane', cursive;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.header .btn-logout {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #f39c12;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header .btn-logout:hover {
+    background: #e08e0b;
+}
+
+/* CONTAINER ADMIN */
+.admin-container {
+    width: 80%;
+    margin: 40px auto;
+    background: #eee;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+/* HEADER ADMIN */
+.admin-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-header-top .logo {
+    font-size: 36px;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.admin-header-top .btn-logout {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #f39c12;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-header-top .btn-logout:hover {
+    background: #e08e0b;
+}
+
+/* CABEÇALHO ADMIN */
+.admin-container .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-container .admin-header h2 {
+    color: #f39c12;
+}
+
+/* BOTÃO NOVA PIZZA */
+.admin-container .btn-nova {
+    background: #f39c12;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-container .btn-nova:hover {
+    background: #e08e0b;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+.admin-container #formPizza {
+    margin: 20px 0;
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin-container #formPizza input,
+.admin-container #formPizza select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.admin-container #formPizza button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-container #formPizza button:hover {
+    background: #e08e0b;
+}
+
+/* TABELA DE PIZZAS */
+.admin-container .tabela-pizzas {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-container .tabela-pizzas th,
+.admin-container .tabela-pizzas td {
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 50px;
+}
+
+.admin-container .tabela-pizzas th {
+    background: #f39c12;
+    color: white;
+    font-weight: 600;
+}
+
+.admin-container .tabela-pizzas td img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+.admin-container .tabela-pizzas td button {
+    background: #f39c12;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-container .tabela-pizzas td button:hover {
+    background: #e08e0b;
+}
+
+.admin-container .tabela-pizzas tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}

@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<title>Painel Admin</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
 
-<header class="header">
-    <div class="logo">La <span>Fiamma</span></div>
-    <button onclick="logoutAdmin()" class="btn-logout">Sair</button>
-</header>
+    <header class="header">
+        <div class="logo">La <span>Fiamma</span></div>
+        <button onclick="logoutAdmin()" class="btn-logout">Sair</button>
+    </header>
 
-<main class="admin-container">
+    <main class="admin-container">
 
-    <div class="admin-header">
-        <h2>Gerenciar Cardápio</h2>
-        <button class="btn-nova" onclick="abrirForm()">+ Nova Pizza</button>
-    </div>
+        <div class="admin-header">
+            <h2>Gerenciar Cardápio</h2>
+            <button class="btn-nova" id="btnNova">
+                <span class="icon">+</span> Nova Pizza
+            </button>
+        </div>
 
-    <div class="admin-form" id="formPizza">
-        <input id="nome" placeholder="Nome da Pizza">
-        <input id="ingredientes" placeholder="Ingredientes">
-        <input id="preco" placeholder="Preço">
-        <select id="categoria">
-            <option value="tradicional">Tradicional</option>
-            <option value="especial">Especial</option>
-            <option value="doce">Doce</option>
-        </select>
-        <input id="imagem" placeholder="URL da imagem">
-        <button onclick="salvarPizza()">Salvar Pizza</button>
-    </div>
+        <div class="admin-form" id="formPizza">
+            <input id="nome" placeholder="Nome da Pizza">
+            <input id="ingredientes" placeholder="Ingredientes">
+            <input id="preco" placeholder="Preço">
+            <select id="categoria">
+                <option value="tradicional">Tradicional</option>
+                <option value="especial">Especial</option>
+                <option value="doce">Doce</option>
+            </select>
+            <input id="imagem" placeholder="URL da imagem">
+            <button onclick="salvarPizza()">Salvar Pizza</button>
+        </div>
 
-    <table class="tabela-pizzas">
-        <thead>
-            <tr>
-                <th>Imagem</th>
-                <th>Nome</th>
-                <th>Categoria</th>
-                <th>Preço</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="listaPizzas"></tbody>
-    </table>
+        <table class="tabela-pizzas">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaPizzas"></tbody>
+        </table>
 
-</main>
+    </main>
 
-<script src="admin.js"></script>
+    <script src="admin.js"></script>
 </body>
+
 </html>
