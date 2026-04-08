@@ -1,0 +1,22 @@
+<Enderecos>
+    <Endereco>
+        <CEP>06400-000</CEP>
+        <Rua>Rua A</Rua>
+        <Bairro>Centro</Bairro>
+        <Cidade>Barueri</Cidade>
+    </Endereco>
+
+    <Endereco>
+        <CEP>01000-000</CEP>
+        <Rua>Avenida Paulista</Rua>
+        <Bairro>Bela Vista</Bairro>
+        <Cidade>São Paulo</Cidade>
+    </Endereco>
+
+    <Endereco>
+        <CEP>20000-000</CEP>
+        <Rua>Rua das Flores</Rua>
+        <Bairro>Jardim Primavera</Bairro>
+        <Cidade>Rio de Janeiro</Cidade>
+    </Endereco>
+</Enderecos>
