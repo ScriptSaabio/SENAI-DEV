@@ -1,3 +1,14 @@
+:root {
+    --cor-primaria: #f4e1bf;
+    --cor-secundaria: #093E70;
+    --cor-accento: #daa905;
+    --cor-fundo: #f4e1bf;
+    --cor-fundo-secundario: white;
+    --cor-texto: #093E70;
+    --cor-texto-secundario: white;
+    --cor-borda: #ccc;
+}
+
 /* =============================
    Layout Base e Sticky Footer
 ============================= */
@@ -11,41 +22,41 @@ body {
     flex-direction: column;
     min-height: 100vh; /* garante altura mínima da tela */
     font-family: Arial, sans-serif;
-    background: #f4e1bf;
-    color: #093E70;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 main {
     flex: 1; /* ocupa o espaço restante, empurrando o footer para baixo */
     padding: 20px;
-    background-color: #f4e1bf;
+    background-color: var(--cor-fundo);
 }
 
 /* =============================
    Header e Navegação
 ============================= */
 header {
-    background-color: #f4e1bf;
-    color: #093E70;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
     padding: 20px;
     text-align: center;
 }
 
 nav {
-    background: #daa905;
+    background: var(--cor-accento);
     padding: 10px;
     text-align: center;
 }
 
 nav a {
-    color: white;
+    color: var(--cor-texto-secundario);
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #093E70;
+    color: var(--cor-texto);
 }
 
 /* =============================
@@ -62,7 +73,7 @@ nav a:hover {
 .container h2,
 h3 {
     margin: 10px 0 5px 0;
-    color: #093E70;
+    color: var(--cor-texto);
 }
 
 /* =============================
@@ -70,7 +81,7 @@ h3 {
 ============================= */
 .sobre,
 .contato {
-    background: white;
+    background: var(--cor-fundo-secundario);
     padding: 20px;
     margin-top: 30px;
     border-radius: 10px;
@@ -99,8 +110,8 @@ h3 {
 }
 
 .card {
-    background-color: white;
-    border: 1px solid #daa905;
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
     border-radius: 10px;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -121,13 +132,13 @@ h3 {
 
 .card h3 {
     margin: 10px 0 5px 0;
-    color: #093E70;
+    color: var(--cor-texto);
 }
 
 .card p {
     padding: 0 10px 15px 10px;
     font-size: 14px;
-    color: #093E70;
+    color: var(--cor-texto);
 }
 
 /* =============================
@@ -141,8 +152,8 @@ h3 {
 }
 
 .produto {
-    background: white;
-    border: 1px solid #ccc;
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
     border-radius: 10px;
     padding: 15px;
     width: 200px;
@@ -157,6 +168,10 @@ h3 {
     object-fit: cover;   /* garante que a imagem preencha bem o espaço */
 }
 
+.produto:hover {
+    transform: translateY(-5px);
+}
+
 /* =============================
    Formulário
 ============================= */
@@ -169,21 +184,21 @@ form {
 input,
 textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-borda);
     border-radius: 5px;
 }
 
 button {
     padding: 10px;
-    background: #333;
-    color: white;
+    background: var(--cor-secundaria);
+    color: var(--cor-texto-secundario);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #555;
+    background: var(--cor-secundaria-hover);
 }
 
 /* =============================
@@ -198,21 +213,21 @@ button:hover {
 
 .redes a {
     text-decoration: none;
-    color: white;
+    color: var(--cor-texto-secundario);
     font-weight: bold;
     margin: 0 10px;
 }
 
 .redes a:hover {
-    color: #093E70;
+    color: var(--cor-texto);
 }
 
 /* =============================
    Rodapé
 ============================= */
 footer {
-    background: #daa905;
-    color: white;
+    background: var(--cor-accento);
+    color: var(--cor-texto-secundario);
     text-align: center;
     padding: 10px;
     font-weight: bold;
