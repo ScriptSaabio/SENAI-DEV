@@ -1,0 +1,254 @@
+:root {
+    --cor-fundo-um: lightgrey;
+    --cor-fundo-dois: whitesmoke;
+    --cor-fundo-tres: rgb(65, 95, 119);
+    --cor-fundo-quatro: rgb(114, 130, 143);
+    --cor-fundo-cinco: black;
+    --cor-texto-um: black;
+    --cor-texto-dois: white;
+    --cor-texto-tres: blue;
+    --cor-botao-um: rgb(77, 202, 66);
+    --cor-botao-dois: blue;
+    --cor-botao-tres: rgb(62, 161, 52);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cor-fundo-um);
+    color: var(--cor-texto-um);
+}
+
+header{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.topo{
+    /* width: 85%; */
+    background-color: var(--cor-fundo-dois);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    padding-top: 15px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+
+nav a{
+    text-decoration: none;
+    color: var(--cor-texto-um);
+    padding:  8px 15px;
+    border-radius: 5px;
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background-color: #0d6efd;
+    color: white;
+}
+
+.active{
+    background-color:#0d6efd;
+    color: White;
+}
+
+.banner{
+    /* width: 85%; */
+    height: 300px;
+    margin: 20px auto;
+    background-color: var(--cor-fundo-tres);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    color: var(--cor-texto-dois);
+    font-size: 46px;
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.10); */
+}
+
+.texto {
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+.texto h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.texto p{
+    color: var(--cor-texto-um);
+    font-size: 18px;
+}
+
+.produtos {
+    /* width:85%; */
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 32%;
+    background-color: var(--cor-fundo-dois);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0   4px 10px rgba(0,0,0,0.10);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3{
+    margin: 18px 0 0px;
+    font-size: 24px;
+}
+
+.card p {
+    padding: 0 15px;
+    color: var(--cor-texto-um);
+    min-width: 60px;
+}
+
+.card button {
+    margin-top: 15px;
+    border: none;
+    background-color: var(--cor-botao-um);
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: var(--cor-botao-tres);
+}
+
+.redes {
+    /* width: 85%; */
+    margin: 60px auto 0;
+    background-color: var(--cor-fundo-quatro);
+    text-align: center;
+    padding: 40px;
+}
+
+.redes h2 {
+    margin-bottom: 20px;
+}
+
+.redes img {
+    width: 40px;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--cor-fundo-cinco);
+    color: var(--cor-texto-dois);
+    text-align: center;
+    padding: 18px;
+    margin-top: 0;
+}
+
+/*
+body {
+    background-color: var(--cor-fundo-um);
+}
+
+.header {
+    background-color: var(--cor-fundo-dois);
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-area {
+    color: var(--cor-texto-tres);
+    font-style: bold;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    margin: 10px 50px 10px 50px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.nav-area a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.main-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-produto{
+    justify-content: center;
+    align-items: center;
+    gap:10px
+}
+
+.main-card{
+    background-color: var(--cor-fundo-dois);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.rede{
+    background-color: var(--cor-fundo-quatro);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: -10px;
+    padding: 30px;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-cinco);
+    color: var(--cor-texto-dois);
+    margin: -10px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+} */
