@@ -1,9 +1,10 @@
 :root {
     --cor-fundo-um: lightgrey;
-    --cor-fundo-dois: whitesmoke;
+    --cor-fundo-dois: rgb(245, 245, 245);
     --cor-fundo-tres: rgb(65, 95, 119);
     --cor-fundo-quatro: rgb(114, 130, 143);
     --cor-fundo-cinco: black;
+    --cor-fundo-seis: rgb(253, 253, 253);
 
     --cor-texto-um: black;
     --cor-texto-dois: white;
@@ -14,25 +15,41 @@
     --cor-botao-tres: rgb(62, 161, 52);
 }
 
-/* RESET */
+/* =========================
+   RESET
+========================= */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* =========================
+   ESTRUTURA GERAL
+========================= */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--cor-fundo-dois);
     color: var(--cor-texto-um);
-    width:100%;
     line-height:1.5;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* TOPO */
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER / TOPO
+========================= */
 header{
-    width:100%;
-    padding:20px 40px 10px;
     background: var(--cor-fundo-dois);
 }
 
@@ -41,13 +58,12 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-top:1px solid var(--cor-fundo-quatro);
-    padding-top:15px;
+    padding: 1px 20px;
+    border-bottom: 2px solid var(--cor-texto-tres);
 }
 
 .logo{
     width:50px;
-    width: 50px;
 }
 
 /* MENU */
@@ -61,23 +77,21 @@ nav a{
     font-size:15px;
 }
 
-nav a:hover{
-    background: var(--cor-botao-dois);
-    color: var(--cor-texto-dois);
-}
-
+nav a:hover,
 .active{
     background: var(--cor-botao-dois);
     color: var(--cor-texto-dois);
 }
 
-/* BANNER */
+/* =========================
+   BANNER
+========================= */
 .banner{
-     width: 100%; 
+    width: 100%; 
     height: 300px;
-    margin: 20px auto;
+
     background-color: var(--cor-fundo-tres);
-    background-size: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,13 +103,77 @@ nav a:hover{
     font-weight:bold;
 }
 
-/* TEXTO */
+/* =========================
+   SEÇÃO TEXTO / CARD
+========================= */
 .texto{
     text-align:center;
     padding:45px 20px 30px;
     background: var(--cor-fundo-dois);
 }
 
+.texto .card{
+    width:600px;
+    max-width:90%;
+    margin:0 auto;
+
+    background: var(--cor-texto-dois);
+    border-radius:12px;
+    padding:40px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+/* FORMULÁRIO */
+.texto .card form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.texto .card input,
+.texto .card textarea{
+    width:100%;
+    max-width:500px;
+
+    padding:16px 20px;
+
+    border:1px solid var(--cor-fundo-dois);
+    border-radius:12px;
+
+    font-size:16px;
+    outline:none;
+}
+
+.texto .card textarea{
+    height:180px;
+    resize:none;
+}
+
+/* BOTÃO */
+.texto .card button{
+    width:100%;
+
+    background: var(--cor-texto-tres);
+    color: var(--cor-fundo-dois);
+
+    border: 1px solid var(--cor-texto-tres);
+
+    padding:10px 18px;
+    border-radius:5px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.texto .card button:hover{
+    background: var(--cor-fundo-dois);
+    color: var(--cor-texto-tres);
+}
+
+/* TEXTOS */
 .texto h2{
     font-size:24px;
     margin-bottom:10px;
@@ -106,30 +184,44 @@ nav a:hover{
     color: var(--cor-fundo-quatro);
 }
 
-/* PRODUTOS */
+.texto img{
+    width:100%;
+    height:200px;
+    cursor:pointer;
+}
+
+/* =========================
+   PRODUTOS
+========================= */
 .produtos{
     width:100%;
     display:flex;
     justify-content:center;
     gap:35px;
-    padding:20px 40px 60px;
     flex-wrap:wrap;
-    background: var(--cor-fundo-dois);
+
+    padding:20px 40px 60px;
+
+    background: var(--cor-fundo-seis);
 }
 
 .card{
     width:360px;
+
     background: var(--cor-texto-dois);
+
     border-radius:12px;
     overflow:hidden;
+
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
     text-align:center;
     padding-bottom:20px;
 }
 
 .card img{
     width:100%;
-    height: 300px;
+    height:300px;
     object-fit:cover;
 }
 
@@ -148,10 +240,13 @@ nav a:hover{
 .card button{
     background: var(--cor-botao-um);
     color: var(--cor-texto-dois);
+
     border:none;
     padding:10px 18px;
+
     border-radius:5px;
     cursor:pointer;
+
     margin-top:10px;
     transition:0.3s;
 }
@@ -160,10 +255,13 @@ nav a:hover{
     background: var(--cor-botao-tres);
 }
 
-/* REDES */
+/* =========================
+   REDES SOCIAIS
+========================= */
 .redes{
     width:100%;
     background: var(--cor-fundo-um);
+
     text-align:center;
     padding:50px 20px;
 }
@@ -186,12 +284,17 @@ nav a:hover{
     cursor:pointer;
 }
 
-/* RODAPÉ */
+/* =========================
+   RODAPÉ
+========================= */
 footer{
     width:100%;
+
     background: var(--cor-fundo-cinco);
     color: var(--cor-texto-dois);
+
     text-align:center;
     padding:18px;
+
     font-size:15px;
 }
