@@ -1,33 +1,65 @@
-/* MENU ATIVO AUTOMÁTICO */
-document.addEventListener("DOMContentLoaded", function () {
 
-    const links = document.querySelectorAll("nav a");
-    const paginaAtual = window.location.pathname.split("/").pop();
+/* LOGIN */
+const elemento = {
+  email: document.querySelector("#email"),
+  senha: document.querySelector("#senha"),
+  form: document.querySelector("#formLogin"),
+  button: document.querySelector("#botao-login"),
+};
 
-    links.forEach(link => {
-        const href = link.getAttribute("href");
+// LOGIN PADRÃO
+const login = [{ usu: "admin@admin.com", ususenha: "123" }];
 
-        if (href === paginaAtual || (paginaAtual === "" && href === "index.html")) {
-            link.classList.add("active");
-        }
-    });
+const dadosDigitados = {
+    email: "",
+    senha: "",
+};
 
-});
+elemento.form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    getDadosDigitados(elemento.email.value,elemento.senha.value)
+  });
 
+function getDadosDigitados(email,senha) {
+    dadosDigitados.email = email;
+    dadosDigitados.senha = senha;
+}
 
-/* ALERTA BOTÕES SAIBA MAIS */
-const botoes = document.querySelectorAll(".card button");
+// /* LOGOUT */
 
-botoes.forEach(botao => {
-    botao.addEventListener("click", function () {
-        alert("Em breve mais informações sobre este produto.");
-    });
-});
+// function logout() {
+//   localStorage.removeItem("usuarioLogado");
 
+//   // redireciona
+//   window.location.href = "index.html";
+// }
 
-/* ROLAGEM SUAVE DO MENU */
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener("click", function () {
-        document.body.style.scrollBehavior = "smooth";
-    });
-});
+// /* MENU ATIVO AUTOMÁTICO */
+// document.addEventListener("DOMContentLoaded", function () {
+//   const links = document.querySelectorAll("nav a");
+//   const paginaAtual = window.location.pathname.split("/").pop();
+
+//   links.forEach((link) => {
+//     const href = link.getAttribute("href");
+
+//     if (href === paginaAtual || (paginaAtual === "" && href === "index.html")) {
+//       link.classList.add("active");
+//     }
+//   });
+// });
+
+// /* ALERTA BOTÕES SAIBA MAIS */
+// const botoes = document.querySelectorAll(".card .botao");
+
+// botoes.forEach((botao) => {
+//   botao.addEventListener("click", function () {
+//     alert("Em breve mais informações sobre este produto.");
+//   });
+// });
+
+// /* ROLAGEM SUAVE DO MENU */
+// document.querySelectorAll("nav a").forEach((link) => {
+//   link.addEventListener("click", function () {
+//     document.body.style.scrollBehavior = "smooth";
+//   });
+// });
