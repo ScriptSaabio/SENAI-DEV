@@ -1,4 +1,7 @@
 :root {
+
+    /* CORES DE FUNDO - usadas no fundo das seções */
+
     --cor-fundo-um: lightgrey;
     --cor-fundo-dois: rgb(245, 245, 245);
     --cor-fundo-tres: rgb(65, 95, 119);
@@ -6,9 +9,13 @@
     --cor-fundo-cinco: black;
     --cor-fundo-seis: rgb(253, 253, 253);
 
+    /* CORES DE TEXTO - usadas nos textos do site */
+
     --cor-texto-um: black;
     --cor-texto-dois: white;
     --cor-texto-tres: blue;
+
+    /* CORES DOS BOTÕES - usadas nos botões e hover */
 
     --cor-botao-um: rgb(77, 202, 66);
     --cor-botao-dois: blue;
@@ -17,18 +24,16 @@
     --cor-botao-cinco: rgb(224, 48, 48);
 }
 
-/* =========================
-   RESET
-========================= */
+/* RESET - remove espaçamentos padrão do navegador */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* =========================
-   ESTRUTURA GERAL
-========================= */
+/* ESTRUTURA GERAL - define o layout principal da página */
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--cor-fundo-dois);
@@ -40,6 +45,8 @@ body{
     flex-direction: column;
 }
 
+/* MAIN - centraliza o conteúdo principal */
+
 main{
     flex:1;
     display:flex;
@@ -48,12 +55,13 @@ main{
     flex-direction: column;
 }
 
-/* =========================
-   HEADER / TOPO
-========================= */
+/* HEADER / TOPO - área superior do site */
+
 header{
     background: var(--cor-fundo-dois);
 }
+
+/* TOPO - organiza logo e menu */
 
 .topo{
     width:100%;
@@ -64,11 +72,14 @@ header{
     border-bottom: 2px solid var(--cor-texto-tres);
 }
 
+/* LOGO - tamanho da imagem da logo */
+
 .logo{
     width:50px;
 }
 
-/* MENU */
+/* MENU - estilo dos links do menu */
+
 .menu {
     text-decoration:none;
     color: var(--cor-texto-um);
@@ -79,12 +90,16 @@ header{
     font-size:15px;
 }
 
-.menu:hover, .menu.active{
+/* MENU HOVER - efeito ao passar o mouse */
+
+.menu:hover,
+.menu.active{
     background: var(--cor-botao-dois);
     color: var(--cor-texto-dois);
 }
 
-/* LOGIN */
+/* LOGIN - botão/link de login */
+
 .login{
     text-decoration:none;
     background: var(--cor-botao-um);
@@ -96,13 +111,15 @@ header{
     font-size:15px;
 }
 
-.login:hover, .login.active{
+/* LOGIN HOVER - efeito do botão login */
+
+.login:hover,
+.login.active{
     background: var(--cor-botao-tres);
 }
 
-/* =========================
-   BANNER
-========================= */
+/* BANNER - seção principal destacada */
+
 .banner{
     width: 100%; 
     height: 300px;
@@ -114,20 +131,23 @@ header{
     align-items: center;
 }
 
+/* TÍTULO DO BANNER */
+
 .banner h1{
     color: var(--cor-texto-dois);
     font-size:52px;
     font-weight:bold;
 }
 
-/* =========================
-   SEÇÃO TEXTO / CARD
-========================= */
+/* SEÇÃO TEXTO / CARD - área de textos e formulários */
+
 .texto{
     text-align:center;
     padding:45px 20px 30px;
     background: var(--cor-fundo-dois);
 }
+
+/* CARD PADRÃO - caixa principal de conteúdo */
 
 .texto .card{
     width:600px;
@@ -142,6 +162,8 @@ header{
     text-align:center;
 }
 
+/* CARD LOGIN - versão menor para login */
+
 .texto .card.login{
     width:450px;
     max-width:90%;
@@ -155,13 +177,16 @@ header{
     text-align:center;
 }
 
-/* FORMULÁRIO */
+/* FORMULÁRIO - organiza os campos do formulário */
+
 .texto .card form{
     display:flex;
     flex-direction:column;
     align-items:center;
     gap:20px;
 }
+
+/* INPUTS E TEXTAREA - estilo dos campos */
 
 .texto .card input,
 .texto .card textarea{
@@ -177,12 +202,15 @@ header{
     outline:none;
 }
 
+/* TEXTAREA - tamanho fixo da área de texto */
+
 .texto .card textarea{
     height:180px;
     resize:none;
 }
 
-/* BOTÃO */
+/* BOTÃO - estilo dos botões do formulário */
+
 .texto .card button{
     width:100%;
 
@@ -198,12 +226,15 @@ header{
     transition:0.3s;
 }
 
+/* BOTÃO HOVER - efeito ao passar o mouse */
+
 .texto .card button:hover{
     background: var(--cor-fundo-dois);
     color: var(--cor-texto-tres);
 }
 
-/* TEXTOS */
+/* TEXTOS - títulos e parágrafos */
+
 .texto h2{
     font-size:24px;
     margin-bottom:10px;
@@ -214,17 +245,23 @@ header{
     color: var(--cor-fundo-quatro);
 }
 
+/* IMAGEM CARD - imagem grande do card */
+
 .texto img.img{
     width:100%;
     height:200px;
     cursor:pointer;
 }
 
+/* IMAGEM PEQUENA - ícones ou imagens menores */
+
 .texto img.imagem{
-    width:20px;
-    height: 20px;
+    width: 100px;
+    height: 100px;
     cursor:pointer;
 }
+
+/* TÍTULO LOGIN - estilo do título da tela login */
 
 .texto .card.login h2{
     color: var(--cor-texto-tres);
@@ -232,9 +269,8 @@ header{
     margin-bottom:10px;
 }
 
-/* =========================
-   PRODUTOS
-========================= */
+/* PRODUTOS - área dos cards de produtos */
+
 .produtos{
     width:100%;
     display:flex;
@@ -246,6 +282,8 @@ header{
 
     background: var(--cor-fundo-seis);
 }
+
+/* CARD PRODUTO - caixa de cada produto */
 
 .card{
     width:360px;
@@ -261,16 +299,22 @@ header{
     padding-bottom:20px;
 }
 
+/* IMAGEM PRODUTO */
+
 .card img{
     width:100%;
     height:300px;
     object-fit:cover;
 }
 
+/* TÍTULO PRODUTO */
+
 .card h3{
     font-size:28px;
     margin:15px 0 10px;
 }
+
+/* TEXTO PRODUTO */
 
 .card p{
     font-size:18px;
@@ -278,6 +322,8 @@ header{
     padding:0 18px;
     min-height:65px;
 }
+
+/* BOTÃO PRODUTO */
 
 .card button{
     background: var(--cor-botao-um);
@@ -293,13 +339,14 @@ header{
     transition:0.3s;
 }
 
+/* BOTÃO PRODUTO HOVER */
+
 .card button:hover{
     background: var(--cor-botao-tres);
 }
 
-/* =========================
-   REDES SOCIAIS
-========================= */
+/* REDES SOCIAIS - seção das redes sociais */
+
 .redes{
     width:100%;
     background: var(--cor-fundo-um);
@@ -308,16 +355,22 @@ header{
     padding:50px 20px;
 }
 
+/* TÍTULO REDES */
+
 .redes h3{
     font-size:20px;
     margin-bottom:10px;
 }
+
+/* TEXTO REDES */
 
 .redes p{
     font-size:18px;
     color: var(--cor-fundo-quatro);
     margin-top:30px;
 }
+
+/* ÍCONES REDES */
 
 .redes img{
     width:40px;
@@ -326,9 +379,8 @@ header{
     cursor:pointer;
 }
 
-/* =========================
-   RODAPÉ
-========================= */
+/* RODAPÉ - parte inferior do site */
+
 footer{
     width:100%;
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <title>Document</title>
     <link rel="stylesheet" href="admin.css">
 </head>
@@ -13,7 +13,7 @@
 
     <header class="header">
         <div class="topo">
-            
+
             <h1>Sistema Hidráulica Pro</h1>
 
             <nav>
@@ -34,11 +34,38 @@
 
         </aside>
 
-        <section class="conteudo">
+        <!-- <section class="conteudo">
 
             <div class="card-boas-vindas">
                 <h2>Bem-vindo</h2>
                 <p>Selecione uma opção no menu lateral</p>
+            </div>
+
+        </section> -->
+
+        <section class="conteudo">
+
+            <!-- CARD INICIAL -->
+            <div class="card-boas-vindas" id="boasVindas">
+
+                <h2>Bem-vindo</h2>
+                <p>Selecione uma opção no menu lateral</p>
+
+            </div>
+
+            <!-- ÁREA PESQUISA -->
+            <div class="pesquisa-produto" id="pesquisaProduto">
+
+                <h2>Consultar Produto</h2>
+
+                <input type="text" id="campoPesquisa" placeholder="Digite uma bomba ou número...">
+
+                <button id="btnPesquisar">
+                    Pesquisar
+                </button>
+
+                <div id="resultadoPesquisa"></div>
+
             </div>
 
         </section>
